@@ -15,8 +15,8 @@ eviralversion = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 
-if Config.eviral_STRING:
-    session = StringSession(str(Config.eviral_STRING))
+if Config.EVIRAL_STRING:
+    session = StringSession(str(Config.EVIRAL_STRING))
 else:
     session = "FIREX"
 
@@ -31,12 +31,12 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"eviral_STRING - {e}")
+    print(f"EVIRAL_STRING - {e}")
     sys.exit()
 
 
 FIREX = TelegramClient(
-    session="eviral-Bot",
+    session="EVIRAL-Bot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
@@ -45,7 +45,7 @@ FIREX = TelegramClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-bot = kbot = eviral
+bot = kbot = EVIRAL
 tbot = FIREX
 
 
