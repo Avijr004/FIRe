@@ -15,8 +15,8 @@ eviralversion = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 
-if Config.eviral_STRING:
-    session = StringSession(str(Config.eviral_STRING))
+if config.eviral_STRING:
+    session = StringSession(str(config.eviral_STRING))
 else:
     session = "FIREX"
 
@@ -89,9 +89,9 @@ if bool(ENV):
     LOGS = getLogger("[FIRE-X 3.0]")
 
 try:
-    if config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:
-        HEROKU_APP = heroku3.from_key(Config.HEROKU_API_KEY).apps()[
-            Config.HEROKU_APP_NAME
+    if config.HEROKU_API_KEY is not None or config.HEROKU_APP_NAME is not None:
+        HEROKU_APP = heroku3.from_key(config.HEROKU_API_KEY).apps()[
+            config.HEROKU_APP_NAME
         ]
     else:
         HEROKU_APP = None
