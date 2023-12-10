@@ -15,7 +15,7 @@ eviralversion = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 
-if  Config.eviral_STRING:
+if Config.eviral_STRING:
     session = StringSession(str(Config.eviral_STRING))
 else:
     session = "FIREX"
