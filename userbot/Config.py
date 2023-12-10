@@ -2,7 +2,7 @@ import os
 
 from telethon.tl.types import ChatBannedRights
 
-ENV = bool(os.environ.get("ENV", False))
+ENV = bool(os.environ.get("ENV", True))
 if ENV:
     import os
 
@@ -110,8 +110,8 @@ if ENV:
         BOY_OR_GIRL = os.environ.get("BOY_OR_GIRL", "BOY")
         BOT_TRIGGER = os.environ.get("BOT_TRIGGER", "^/")
         BOTMODE_LOG = int(os.environ.get("BOTMODE_LOG", False))
-        BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-        BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
+        BOT_TOKEN = os.environ.get("BOT_TOKEN", "6819381670:AAGHM2b7aJHP_GE0LnXI8elW9odocGopieA")
+        BOT_USERNAME = os.environ.get("BOT_USERNAME", "Universe_string_bot")
         FORCE_SUB = os.environ.get("FORCE_SUB", None)
         FORCE_CHANNEL_UN = os.environ.get("FORCE_CHANNEL_UN", None)
         LOGGER_ID = os.environ.get("LOGGER_ID", "-1001808960170")
@@ -124,7 +124,7 @@ if ENV:
         # can get from https://coffeehouse.intellivoid.net/
         RANDOM_STUFF_API_KEY = os.environ.get("RANDOM_STUFF_API_KEY", None)
         # github vars
-        BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
+        BOT_USERNAME = os.environ.get("BOT_USERNAME", "Universe_string_bot")
         FORCE_CHANNEL_ID = int(os.environ.get("FORCE_CHANNEL_ID", False))
         PM_DATA = os.environ.get("PM_DATA", "ENABLE")
         GOOGLE_SEARCH_COUNT_LIMIT = int(os.environ.get("GOOGLE_SEARCH_COUNT_LIMIT", 9))
@@ -211,7 +211,7 @@ if ENV:
         # For Databases
         # can be None in which case plugins requiring
         # DataBase would not work
-        DB_URI = os.environ.get("DATABASE_URL", None)
+        DB_URI = os.environ.get("DATABASE_URL", "postgres://tthweluc:8GjAmGVf0CKBrPNQ0U-8vfIg9kedaTHT@silly.db.elephantsql.com/tthweluc")
         # number of rows of buttons to be displayed in .eviral command
         BUTTONS_IN_HELP = int(os.environ.get("NO_OF_BUTTONS", 7))
         NO_OF_BUTTONS = int(os.environ.get("NO_OF_BUTTONS", 7))
@@ -228,7 +228,7 @@ else:
 
 
 class Production(Config):
-    LOGGER = False
+    LOGGER = True
 
 
 class Development(Config):
